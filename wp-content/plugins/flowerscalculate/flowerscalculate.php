@@ -7,7 +7,7 @@ Author: Maksim Dudzich
 */
 function add_plugin_menu() {
     add_menu_page(
-        'Настройка',          // Название страницы
+        'Настройк',          // Название страницы
         'Настройка',          // Название меню
         'administrator',      // Роль пользователя, который видит этот пункт меню
         'your-plugin-settings', // Уникальный идентификатор страницы
@@ -28,11 +28,12 @@ function plugin_settings_page() {
 function enqueue_plugin_scripts() {
     wp_enqueue_style('plugin-styles', plugins_url('css/styles.css', __FILE__));
     wp_enqueue_script('plugin-scripts', plugins_url('js/scripts.js', __FILE__), array('jquery'), null, true);
-}
+ }
 
     function custom_plugin_ajax_handler() {
         // Получаем ID элемента
         $element_id = $_POST['element_id'];
+
     
         // Здесь вы можете выполнить дополнительные действия с полученным ID
         // Например, обработать данные формы, сохранить их и вернуть результат
